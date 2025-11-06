@@ -17,13 +17,13 @@ int main(void)
     pid=fork();
     if (pid<0)
     {
-        perror("fork() has failed.");
+        printf("fork() has failed.");
         exit(1);
     }
     if (pid==0)
     {
         execl("./Q2_P2_Process2_101302440_101303269", "Q2_P2_Process2_101302440_101303269", NULL);
-        perror("exec() has failed.");
+        printf("exec() has failed.");
         exit(1);
     }
     else

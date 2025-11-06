@@ -16,7 +16,7 @@ int main(void)
     pid=fork();
     if (pid<0) 
     {
-        perror("fork() has failed.");
+        printf("fork() has failed.");
         exit(1);
     }
     if (pid==0) 
@@ -24,7 +24,7 @@ int main(void)
         printf("Process 2 started. PID = %d\n", getpid());
         while (1) 
         {
-            printf("[Process 2 PID: %d] counter = %ld\n", getpid(), counter);
+            printf("Process 2 [PID: %d], counter = %ld\n", getpid(), counter);
             counter++;
             sleep(2); //change it to 1 if you feel like its a little too slow
         }
@@ -34,7 +34,7 @@ int main(void)
         printf("Process 1 started. PID = %d\n", getpid());
         while (1) 
         {
-            printf("[Process 1 PID: %d] counter = %ld\n", getpid(), counter);
+            printf("Process 1 [PID: %d], counter = %ld\n", getpid(), counter);
             counter++;
             sleep(2); //change it to 1 if you feel like its a little too slow
         }
