@@ -4,7 +4,6 @@
 
 //this is the program of the child process right now, which got replaced by the original duplicate of the parent's program
 int main(void)
-int main(void)
 {
     long counter=0;
     long cycles=0;
