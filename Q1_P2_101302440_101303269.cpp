@@ -19,7 +19,7 @@ int main(void)
         printf("fork() has failed.");
         exit(1);
     }
-    if (pid==0) 
+    if (pid==0) //this is the child process so its process 2
     {
         printf("Process 2 started. PID = %d\n", getpid());
         while (1) 
@@ -29,7 +29,7 @@ int main(void)
             sleep(2); //change it to 1 if you feel like its a little too slow
         }
     } 
-    else 
+    else //then this is the parent process still process 1
     {
         printf("Process 1 started. PID = %d\n", getpid());
         while (1) 
